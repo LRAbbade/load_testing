@@ -22,6 +22,7 @@ spec:
       containers:
         - name: locust
           image: lrabbade/locust_test
+          imagePullPolicy: Always
           env:
             - name: LOCUST_MODE
               value: master
@@ -68,7 +69,7 @@ spec:
             - name: LOCUST_MODE
               value: worker
             - name: LOCUST_MASTER
-              value: locust-master-service
+              value: locust-master-deployment
             - name: LOCUST_PARAMS
               value: "\x31\x30"
             - name: LOCUST_TARGET_HOST
