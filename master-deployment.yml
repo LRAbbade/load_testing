@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: locust-master-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: locust
+        role: master
+    spec:
+    
+      containers:
+        - name: locust
+          image: lrabbade/locust_test
+          env:
+            - name: LOCUST_MODE
+              value: master
+            - name: LOCUST_TARGET_HOST
+              value: "http://34.74.132.61:8070"
+            - name: LOCUST_PARAMS
+              value: "\x31\x30"
+          
+          ports:
+            - containerPort: 8089
+            - containerPort: 5557
+            - containerPort: 5558
+ 

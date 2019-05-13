@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: locust-slave-deployment
+spec:
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        name: locust
+        role: slave
+    spec:
+    
+      containers:
+        - name: locust
+          image: lrabbade/locust_test
+          env:
+            - name: LOCUST_MODE
+              value: worker
+            - name: LOCUST_MASTER
+              value: locust-master-deployment
+            - name: LOCUST_TARGET_HOST
+              value: "http://34.74.132.61:8070"
+            - name: LOCUST_PARAMS
+              value: "\x31\x30"           

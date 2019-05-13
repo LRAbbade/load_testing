@@ -1,5 +1,5 @@
 #!/bin/bash
-LOCUS_OPTS="--host=$LOCUST_TARGET_HOST"
+LOCUS_OPTS="--host=$LOCUST_TARGET_HOST -L DEBUG"
 # LOCUST_MODE=${LOCUST_MODE:-standalone}
 
 if [[ "$LOCUST_MODE" = "master" ]]; then
