@@ -8,4 +8,5 @@ elif [[ "$LOCUST_MODE" = "worker" ]]; then
     LOCUS_OPTS="$LOCUS_OPTS --slave --master-host=$LOCUST_MASTER"
 fi
 
+echo "locust $LOCUS_OPTS"
 locust $LOCUS_OPTS
