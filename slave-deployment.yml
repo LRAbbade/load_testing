@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: locust-slave-deployment
 spec:
-  replicas: 28
+  replicas: 60
   template:
     metadata:
       labels:

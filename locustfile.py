@@ -19,6 +19,8 @@ class UserBehavior(TaskSet):
         self.client.post("/api/v1/message", data=PAYLOAD, headers=HEADERS)
 
 class WebsiteUser(HttpLocust):
+    min_wait = 1
+    max_wait = 1
     task_set = UserBehavior
 
     def __init__(self):
