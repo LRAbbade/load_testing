@@ -18,9 +18,9 @@ spec:
             - name: LOCUST_MODE
               value: master
             - name: LOCUST_TARGET_HOST
-              value: "http://34.74.132.61:8070"
+              value: "http://54.225.16.54:8070"
             - name: LOCUST_PARAMS
-              value: "\x31\x30"
+              value: "\x31"
           
           ports:
             - containerPort: 8089
