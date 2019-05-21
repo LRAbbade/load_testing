@@ -14,6 +14,7 @@ spec:
       containers:
         - name: locust
           image: lrabbade/locust_test
+          imagePullPolicy: Always
           env:
             - name: LOCUST_MODE
               value: master
