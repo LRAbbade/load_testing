@@ -1,12 +1,13 @@
 from locust import HttpLocust, TaskSet, task
 import json
 import os
+import gevent
 
 PARAMS = int(os.getenv("LOCUST_PARAMS", "1"))
 print(f'Starting locust with {PARAMS} params')
 
 # Pre-initialize request data
-JWT_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5NWRkNTliNy02NTUxLTRkOTUtYTAzZi1lZDRmNjZjZTlhNTkiLCJpc3MiOiI1YmUzLTNiOGQtOTVmZS1kZTEwLTM5NTEtMDg1YSIsImV4cCI6MTU1ODI2ODQ3Mn0.CkVC64YhDDDeJ2_qR9irU4MJqd8Na4jlyjPXjR7B_JA"
+JWT_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwZGFhMjU1Ny04NThlLTQ2MWYtYjQwZC1hMDkyM2ExNGFhNTgiLCJpc3MiOiI1YmU0LTlkYTAtY2E3Yy03ZDBmLWQ3ZjAtNTMwZiIsImV4cCI6MTU1OTI1MzkyMH0.CZybRCZycd0Y4LysOzPFoDNtoXFseYgMzzrxFNjcJ4w"
 HEADERS = {
     "Content-Type": "application/json",
     "Authorization": JWT_TOKEN
