@@ -21,6 +21,6 @@ spec:
             - name: LOCUST_MASTER
               value: locust-master-deployment
             - name: LOCUST_TARGET_HOST
-              value: "http://3.80.172.18:8070"
+              value: "http://54.197.210.63:8070"
             - name: LOCUST_PARAMS
               value: "\x31"           
