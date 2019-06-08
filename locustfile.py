@@ -7,7 +7,7 @@ PARAMS = int(os.getenv("LOCUST_PARAMS", "1"))
 print(f'Starting locust with {PARAMS} params')
 
 # Pre-initialize request data
-JWT_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwZGFhMjU1Ny04NThlLTQ2MWYtYjQwZC1hMDkyM2ExNGFhNTgiLCJpc3MiOiI1YmU0LTlkYTAtY2E3Yy03ZDBmLWQ3ZjAtNTMwZiIsImV4cCI6MTU1OTI1MzkyMH0.CZybRCZycd0Y4LysOzPFoDNtoXFseYgMzzrxFNjcJ4w"
+JWT_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YTFmODU1NS1kOWMyLTQ4OTAtOWE0ZC0zZDJhZWFhZDNlN2MiLCJpc3MiOiI1Y2VmLWMzYjktYjAzNS1mZjBjLWQyMzMtOTJjMiIsImV4cCI6MTU2MDYyOTkwM30.7slHCtm6BaKReZpuQBMaE1oWJnQaFMTr9DSqRq_Jxw0"
 HEADERS = {
     "Content-Type": "application/json",
     "Authorization": JWT_TOKEN

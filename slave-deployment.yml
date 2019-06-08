@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: locust-slave-deployment
 spec:
-  replicas: 60
+  replicas: 400
   template:
     metadata:
       labels:
@@ -21,6 +21,6 @@ spec:
             - name: LOCUST_MASTER
               value: locust-master-deployment
             - name: LOCUST_TARGET_HOST
-              value: "http://54.225.16.54:8070"
+              value: "http://3.80.172.18:8070"
             - name: LOCUST_PARAMS
               value: "\x31"           
