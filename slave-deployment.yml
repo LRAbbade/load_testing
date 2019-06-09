@@ -23,4 +23,4 @@ spec:
             - name: LOCUST_TARGET_HOST
               value: "http://34.207.171.57:8070"
             - name: LOCUST_PARAMS
-              value: "\x31\x30"
+              value: "\x31\x30\x30"
