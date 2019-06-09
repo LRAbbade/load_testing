@@ -25,5 +25,5 @@ class WebsiteUser(HttpLocust):
     task_set = UserBehavior
 
     def __init__(self):
-        print(f'Starting locust aimed at host: {self.host}')
+        print(f'Starting locust aimed at host: {self.host}. Num params: {PARAMS}')
         super(WebsiteUser, self).__init__()
