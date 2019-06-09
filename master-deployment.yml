@@ -19,7 +19,7 @@ spec:
             - name: LOCUST_MODE
               value: master
             - name: LOCUST_TARGET_HOST
-              value: "http://54.197.210.63:8070"
+              value: "http://34.207.171.57:8070"
             - name: LOCUST_PARAMS
               value: "\x31"
           
